@@ -9,10 +9,6 @@
 import UIKit
 
 class MainTabBarController: UITabBarController {
-    let tabbarBigImageLength: CGFloat = 43
-    let centerButtonIndex = 2
-    var button: UIButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         addAllChildViewController()

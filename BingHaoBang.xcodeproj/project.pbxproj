@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A01B62C21CAC362200477FFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B62C11CAC362200477FFE /* AppDelegate.swift */; };
-		A01B62C41CAC362200477FFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01B62C31CAC362200477FFE /* ViewController.swift */; };
 		A01B62C91CAC362200477FFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01B62C81CAC362200477FFE /* Assets.xcassets */; };
-		A01B62CC1CAC362200477FFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01B62CA1CAC362200477FFE /* LaunchScreen.storyboard */; };
+		A0509C3A1CAD76560054B40C /* GuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0509C391CAD76560054B40C /* GuideViewController.swift */; };
+		A0E4C4541CAD6F1700F67F4E /* FPSLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E4C4531CAD6F1700F67F4E /* FPSLabel.swift */; };
 		A0EA700F1CAC47C100FEF2E3 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA700E1CAC47C100FEF2E3 /* Config.swift */; };
 		A0EA70111CAC485C00FEF2E3 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA70101CAC485C00FEF2E3 /* MyViewController.swift */; };
 		A0EA70131CAC488500FEF2E3 /* IndexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0EA70121CAC488500FEF2E3 /* IndexViewController.swift */; };
@@ -25,10 +25,10 @@
 		9101E85183BB07FD008CA084 /* Pods-BingHaoBang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BingHaoBang.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BingHaoBang/Pods-BingHaoBang.debug.xcconfig"; sourceTree = "<group>"; };
 		A01B62BE1CAC362200477FFE /* BingHaoBang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BingHaoBang.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01B62C11CAC362200477FFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A01B62C31CAC362200477FFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A01B62C81CAC362200477FFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A01B62CB1CAC362200477FFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A01B62CD1CAC362200477FFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0509C391CAD76560054B40C /* GuideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GuideViewController.swift; path = View/GuideViewController.swift; sourceTree = "<group>"; };
+		A0E4C4531CAD6F1700F67F4E /* FPSLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FPSLabel.swift; path = View/FPSLabel.swift; sourceTree = "<group>"; };
 		A0EA700E1CAC47C100FEF2E3 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Common/Config.swift; sourceTree = "<group>"; };
 		A0EA70101CAC485C00FEF2E3 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyViewController.swift; path = View/MyViewController.swift; sourceTree = "<group>"; };
 		A0EA70121CAC488500FEF2E3 /* IndexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IndexViewController.swift; path = View/IndexViewController.swift; sourceTree = "<group>"; };
@@ -74,9 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				A01B62C11CAC362200477FFE /* AppDelegate.swift */,
-				A01B62C31CAC362200477FFE /* ViewController.swift */,
 				A01B62C81CAC362200477FFE /* Assets.xcassets */,
-				A01B62CA1CAC362200477FFE /* LaunchScreen.storyboard */,
 				A01B62CD1CAC362200477FFE /* Info.plist */,
 			);
 			path = BingHaoBang;
@@ -111,6 +109,8 @@
 				A0EA70121CAC488500FEF2E3 /* IndexViewController.swift */,
 				A0EA70141CAC489600FEF2E3 /* FindViewController.swift */,
 				A0EA70161CAC48BF00FEF2E3 /* MainTabBarViewController.swift */,
+				A0E4C4531CAD6F1700F67F4E /* FPSLabel.swift */,
+				A0509C391CAD76560054B40C /* GuideViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -194,7 +194,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A01B62CC1CAC362200477FFE /* LaunchScreen.storyboard in Resources */,
 				A01B62C91CAC362200477FFE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,8 +253,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A01B62C41CAC362200477FFE /* ViewController.swift in Sources */,
 				A01B62C21CAC362200477FFE /* AppDelegate.swift in Sources */,
+				A0509C3A1CAD76560054B40C /* GuideViewController.swift in Sources */,
+				A0E4C4541CAD6F1700F67F4E /* FPSLabel.swift in Sources */,
 				A0EA70111CAC485C00FEF2E3 /* MyViewController.swift in Sources */,
 				A0EA70171CAC48BF00FEF2E3 /* MainTabBarViewController.swift in Sources */,
 				A0EA700F1CAC47C100FEF2E3 /* Config.swift in Sources */,
@@ -265,17 +265,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A01B62CA1CAC362200477FFE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A01B62CB1CAC362200477FFE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A01B62CE1CAC362200477FFE /* Debug */ = {
@@ -366,6 +355,8 @@
 			baseConfigurationReference = 9101E85183BB07FD008CA084 /* Pods-BingHaoBang.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BingHaoBang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -379,6 +370,8 @@
 			baseConfigurationReference = 092C49D19851971B9A4BF69E /* Pods-BingHaoBang.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BingHaoBang/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -18,11 +18,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //创建窗口
         window = UIWindow(frame: SCREEN_BOUNDS)
-        //创建根视图控制器
-        let mainTabBarVC = MainTabBarController()
-        self.window?.rootViewController = mainTabBarVC
+
+        // 得到当前应用的版本号
+        let infoDictionary = NSBundle.mainBundle().infoDictionary
+        let currentAppVersion = infoDictionary!["CFBundleShortVersionString"] as! String
+        
+        // 取出之前保存的版本号
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let appVersion = userDefaults.stringForKey("appVersion")
+        
+        //判断APP是否第一次启动,每版本是否第一次启动
+        if appVersion == nil || appVersion != currentAppVersion
+        {
+            //引导图
+            self.window?.rootViewController = GuideViewController()
+            // 保存最新的版本号
+            userDefaults.setValue(currentAppVersion, forKey: "appVersion")
+        }else{
+            //创建根视图
+            self.window?.rootViewController = MainTabBarController()
+        }
+        
         //显示窗口
         window?.makeKeyAndVisible()
+        
+        //FPS
+        let fpslabel = FPSLabel(frame: CGRectMake(50, 30, 55, 20))
+        self.window?.addSubview(fpslabel)
         return true
     }
 
